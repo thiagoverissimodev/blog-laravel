@@ -1,0 +1,21 @@
+:focus{
+    outline: transparent;
+    box-shadow: 0 0 3px $green-500;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, section {
+    background: $gray-600;
+    color: $gray-300;
+    -weblit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button{
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+}
