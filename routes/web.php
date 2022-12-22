@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-$sectionsMenu = Section::where('menu', '1')->get();
+// $sectionsMenu = Section::where('menu', '1')->get();
 
 // foreach($sectionsMenu as $linkMenu){
     //     Route::get('/'.$linkMenu->url, [SiteController::class, 'makePages'])->name('make-pages');
