@@ -14,6 +14,7 @@
         <div class="col-12 col-md-8">
             <div class="container">
                 @foreach($articles as $item)
+                <a href="#" target="_blank" class="text-decoration-none" style="color: inherit;">
                   <div class="card mb-3 bg-black-custom bg-gradient border-0">
                     <div class="row g-5">
                       <div class="col-md-4">
@@ -28,6 +29,7 @@
                       </div>
                     </div>
                   </div>
+                </a>
                 @endforeach
             </div>
         </div>

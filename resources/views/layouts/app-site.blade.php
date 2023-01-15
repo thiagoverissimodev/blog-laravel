@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Technology In Aeternum') }}</title>
+    {{-- <title>{{ config('app.name', 'Technology In Aeternum') }}</title> --}}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,13 +31,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Technology In Aeternum</title>
-    <link rel="icon" href="{{ asset('site/images/icon-logo.jpg') }}" type="image/icon type">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/image/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/image/favicon-16x16.png')}}">
+    
 </head>
 
 <body>
 
-    @include('layouts.inc.site-header')
     <main class="bg-gradient-main">
+        @include('layouts.inc.site-header')
         @yield('content')
     </main>
 
@@ -68,3 +70,4 @@
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+</html>

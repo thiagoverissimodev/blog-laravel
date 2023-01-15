@@ -11,17 +11,21 @@
     <meta name="base-url" content="{!!url('/')!!}"/>
     <input type="hidden" id="web-router" value="{{url('/dashboard')}}">
 
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/image/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/image/favicon-16x16.png')}}">
+
+    {{-- @yield('styles') --}}
     <!-- Custom fonts for this template-->
     <link href="{{asset('assets/dashboard/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
     <link href="{{asset('assets/dashboard/css/sb-admin-2.css')}}" rel="stylesheet">
     <!-- summernote editor-->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    @yield('styles')
+    
 </head>
-<body id="page-top">
 
-    <!-- Page Wrapper -->
+<body id="page-top">
+<!-- Page Wrapper -->
     <div id="wrapper">
         @include('layouts.inc.dashboard-sidebar')
         <!-- Content Wrapper -->
@@ -36,32 +40,32 @@
             </div>
         </div>
     </div>
-        {{-- @include('layouts.inc.dashboard-content') --}}
+    {{-- @include('layouts.inc.dashboard-content') --}}
 
-    </div>
+
 
     {{-- @vite(['resources/js/app.js']) --}}
     @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- Bootstrap core JavaScript-->
-        <script src="{{asset('assets/dashboard/vendor/jquery/jquery.min.js')}}"></script>
-        <script src="{{asset('assets/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    
-        <!-- Core plugin JavaScript-->
-        <script src="{{asset('assets/dashboard/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-    
-        <!-- Custom scripts for all pages-->
-        <script src="{{asset('assets/dashboard/js/sb-admin-2.min.js')}}"></script>
-    
-        <!-- Page level plugins -->
-        <script src="{{asset('assets/dashboard/vendor/chart.js/Chart.min.js')}}"></script>
-        <!-- Page level custom scripts -->
-        <script src="{{asset('assets/dashboard/js/demo/chart-area-demo.js')}}"></script>
-        <script src="{{asset('assets/dashboard/js/demo/chart-pie-demo.js')}}"></script>
-
-        <!-- Main JS-->
-        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     @yield('scripts')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{asset('assets/dashboard/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{asset('assets/dashboard/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{asset('assets/dashboard/js/sb-admin-2.min.js')}}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{{asset('assets/dashboard/vendor/chart.js/Chart.min.js')}}"></script>
+    <!-- Page level custom scripts -->
+    <script src="{{asset('assets/dashboard/js/demo/chart-area-demo.js')}}"></script>
+    <script src="{{asset('assets/dashboard/js/demo/chart-pie-demo.js')}}"></script>
+
+    <!-- Main JS-->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <script>
         var baseUrl = $('meta[name="base-url"]').attr("content");
@@ -90,3 +94,4 @@
     </script>
 
 </body>
+</html>

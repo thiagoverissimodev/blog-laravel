@@ -17,8 +17,8 @@
 </div> --}}
 @extends('layouts.app-site')
 
+@section('content')    
 @include('layouts.inc.site-carousel')
-
 <section id="video-institucional" class="d-flex justify-content-center bg-gray-600">
 @if(count($gallery_video->videos) > 0)    
   @foreach ($gallery_video->videos as $item)
@@ -90,3 +90,4 @@
 <section id="divider-for-footer" class="bg-gray-600">
   <div class="divider-footer"></div>
 </section>
+@endsection

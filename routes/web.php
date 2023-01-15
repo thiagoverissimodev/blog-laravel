@@ -31,8 +31,9 @@ use Illuminate\Support\Facades\Route;
     //     Route::get('/'.$linkMenu->url, [SiteController::class, 'makePages'])->name('make-pages');
     // }
     
-Route::get('/artigos', [SiteController::class, 'articles'])->name('site.articles.index');
-Route::get('/', [SiteController::class, 'index'])->name('home');
+    Route::get('/', [SiteController::class, 'index'])->name('home');
+    Route::get('/artigos', [SiteController::class, 'articles'])->name('site.articles.index');
+    Route::get('/artigos/{id}', [App\Http\Controllers\Site\ArticleController::class, 'show'])->name('site.articles.show');
 
 Route::group(['namespace', 'Dashboard', 'prefix' => 'dashboard'], function(){
     Route::get('/login', [AuthController::class, 'login'])->name('login');
