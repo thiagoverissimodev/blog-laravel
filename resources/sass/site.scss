@@ -146,6 +146,38 @@
     min-width: 296.44px !important;
     object-fit: cover !important;
 }
+.container-video{
+    width: 1110px;
+    height: 624px;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.container-video .player, .container-video iframe{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+}
+.container-video .player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.container-video img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.container-video svg{
+    width: 80px;
+    line-height: 0;
+    z-index: 1;
+}
+
 @keyframes move-to-top {
     0%{
         top: -75%;

@@ -25,16 +25,28 @@
     @php
       $embed = ($item->embed) ? $item->embed : 'Y92iLjZMN9M'
     @endphp
-    <iframe class="border-radius-15 shadow-green-main over-another border-color-custom" width="1110" height="624" src="{!! 'https://www.youtube.com/embed/'.$embed !!}" 
-      title="Site básico | Thiago Verissimo" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
+    <div class="container-video shadow-green-main over-another" id="videoYt" data-id="{!!$embed!!}" style="width:1110px; height:624px;">
+      <div class="player">
+        <img src="{!!asset('assets/image/capa-for-video.png')!!}" alt="Imagem com previa desfocada do site com botão de player na frente pra abrir vídeo.">
+        <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <path d="M228.1,121.2,84.2,33.2A8,8,0,0,0,72,40V216a8,8,0,0,0,12.2,6.8l143.9-88A7.9,7.9,0,0,0,228.1,121.2Z" 
+          fill="#198754" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+        </svg>
+      </div>
+    </div>
   @endforeach
 @else
-  <iframe class="border-radius-15 shadow-green-main over-another border-color-custom" width="1110" height="624" src="https://www.youtube.com/embed/RCWmN0nN-VE" 
-    title="Site básico | Thiago Verissimo" frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-  </iframe>
+  <div class="container-video shadow-green-main over-another" id="videoYt" data-id="Y92iLjZMN9M" style="width:1110px; height:624px;">
+    <div class="player">
+      <img src="{!!asset('assets/image/capa-for-video.png')!!}" alt="Imagem com previa desfocada do site com botão de player na frente pra abrir vídeo.">
+      <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#000000" viewBox="0 0 256 256">
+        <rect width="256" height="256" fill="none"></rect>
+        <circle cx="128" cy="128" r="96" fill="#198754" stroke="#000000" stroke-miterlimit="10" stroke-width="16"></circle>
+        <polygon points="160 128 112 96 112 160 160 128" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polygon>
+      </svg>
+    </div>
+  </div>
 @endif  
 </section>
 <section class="py-5">
@@ -74,7 +86,7 @@
     <div class="divider"></div>
   </div>
 </section>
-<section class="py-5 bg-gradient-gray-600-to-bottom" style="background: url('{!!asset('assets/image/developer-for-desk.png')!!}'); background-size:cover; height: 40rem;">
+<section class="py-5 bg-gradient-gray-600-to-bottom" style="background: url('{!!asset('assets/image/developer-for-desk.webp')!!}'); background-size:cover; height: 40rem;">
   <div class="container py-5">
     <div class="row d-flex align-items-center h-75">
       <div class="col-12 col-md-6">

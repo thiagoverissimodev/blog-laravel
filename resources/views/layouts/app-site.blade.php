@@ -64,5 +64,21 @@
             })
         })
     </script>
+    <script>
+        const videoYt = document.getElementById('videoYt')
+
+        videoYt.addEventListener('click', snippetYtPlay)
+
+        function snippetYtPlay(event){
+            event.currentTarget.removeEventListener('click', snippetYtPlay)
+             let embed = event.currentTarget.dataset.id
+            event.currentTarget.innerHTML = `
+            <iframe class="" src="https://www.youtube.com/embed/${embed}?autoplay=1" 
+                title="Site básico | Thiago Verissimo" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            `
+        }
+    </script>
 </body>
 </html>
